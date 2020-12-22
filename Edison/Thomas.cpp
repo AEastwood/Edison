@@ -20,7 +20,7 @@ private:
 	static void startListenServer()
 	{
 		int port = PORT;
-		Functions::print("starting listen server on port: " + to_string(port) + ", binded");
+		Functions::print("starting listen server on port: " + to_string(port));
 	}
 
 public:

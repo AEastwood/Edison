@@ -1,4 +1,5 @@
 #include "Thomas.cpp"
+#include "./Core/Command.cpp"
 
 using namespace std;
 
@@ -11,7 +12,7 @@ int main()
 	while (true) {
 		Functions::print("Please enter a command");
 		std::cin >> command;
-		
+		Command::handle(command);
 	}
 	
 }
