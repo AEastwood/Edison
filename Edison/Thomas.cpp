@@ -1,33 +1,28 @@
-#include "./Core/Functions.cpp"
 #include <string>
+#include <iostream>
 #include "env.cpp"
+#include "NetworkHandler.cpp"
 
 using namespace std;
 using namespace Core;
 
 class Thomas
 {
-
 private:
-	static void sayName()
+	static void introduce()
 	{
-		string name = NAME;
-		string version = VERSION;
-		string fqn = "Booting " + name + " " + version;
-		Functions::print(fqn);
-	}
-
-	static void startListenServer()
-	{
-		int port = PORT;
-		Functions::print("starting listen server on port: " + to_string(port));
+		string fqn = "Booting ";
+		std::cout << fqn;
+		std::cout << NAME;
+		std::cout << " " << VERSION;
+		std::cout << endl;
 	}
 
 public:
 	static void start()
 	{
-		sayName();
-		startListenServer();
+		introduce();
+		NetworkHandler::listen();
 	}
 
 };
