@@ -11,7 +11,7 @@ int main()
 
 	while (true) {
 		std::cout << "Please enter a command: ";
-		getline(cin ,command);
+		getline(cin, command);
 		std::cout << CommandHandler::handle(command) << endl;
 	}
 	
