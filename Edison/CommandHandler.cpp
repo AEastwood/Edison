@@ -33,8 +33,6 @@ namespace Core {
 		{
 			Command command(input, 1);
 
-			std::cout << "Handling command: " << command.Title << endl;
-
 			switch (resolveOption(input)) {
 
 			case sanityCheck:
